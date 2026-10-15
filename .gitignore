@@ -1,0 +1,30 @@
+# Dependencies — restore with `bun install` from bun.lock (which IS committed).
+node_modules/
+
+# Build output (`bun run build`).
+dist/
+
+# Secrets. Credentials come from the MCP client's environment — never commit a real token.
+.env
+.env.*
+!.env.example
+
+# Packed tarballs (`npm pack`).
+*.tgz
+
+# macOS. "Icon\r" is the custom-folder-icon artifact Finder leaves behind; the
+# trailing carriage return is part of the filename, hence the `?` wildcard. A
+# committed one breaks `git fetch` with `fatal: bad object refs/Icon?`.
+Icon?
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor / logs
+*.log
+.idea/
+.vscode/
+
+# Generated code graph — rebuilt on demand via `graphify update .`
+graphify-out/

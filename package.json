@@ -1,0 +1,58 @@
+{
+  "name": "@aistartacademy/hub-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server that lets an AI assistant drive an academy hub LMS — cohorts, courses, instructors, leads, drip email, memberships and venue events — over the hub's internal MCP API.",
+  "license": "MIT",
+  "author": "AI Start Academy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiStartAcademy/hub-mcp.git"
+  },
+  "homepage": "https://github.com/AiStartAcademy/hub-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/AiStartAcademy/hub-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lms",
+    "claude",
+    "ai-agent",
+    "education",
+    "cohort",
+    "crm"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "bin": {
+    "hub-mcp": "./dist/index.js",
+    "aisa-hub-mcp": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --target=node --outdir=dist && chmod +x dist/index.js",
+    "dev": "bun run src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run typecheck && bun test && bun run build",
+    "docs:tools": "bun scripts/readme-tools.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

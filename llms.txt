@@ -1,0 +1,17 @@
+# hub-mcp
+
+> Stdio MCP server that lets an AI assistant (Claude Code, Claude Desktop, any MCP client) operate an academy hub — cohorts, courses and lessons, instructors, leads, drip email, memberships and venue events — through the hub's authenticated internal API. Writes are previewed before they commit. MIT.
+
+The hub itself is at https://github.com/AiStartAcademy/hub. Rules for coding agents are in AGENTS.md.
+
+## Docs
+
+- [README](README.md): install from source, configuration, client setup for Claude Code and Claude Desktop, full tool list, hub-side setup, security
+- [AGENTS.md](AGENTS.md): layout, rules and the add-a-tool recipe for coding agents
+- [CONTRIBUTING](CONTRIBUTING.md): how to propose changes
+- [CHANGELOG](CHANGELOG.md): release notes
+
+## Optional
+
+- [License](LICENSE): MIT
+- [Hub MCP API reference](https://github.com/AiStartAcademy/hub/blob/main/docs/MCP_API.md): the endpoints this server calls
